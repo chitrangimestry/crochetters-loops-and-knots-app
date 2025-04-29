@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+:root {
+  color: #242424;
+}
+
+li :hover {
+  color: #24eedd;
+}
