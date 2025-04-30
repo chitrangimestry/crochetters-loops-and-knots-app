@@ -1,14 +1,13 @@
-import { Outlet, useNavigation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import MainHeaderNavigation from "../components/MainHeaderNavigation";
+import Footer from "../components/Footer";
 function RootLayout() {
-  const navigation = useNavigation();
   return (
     <>
       <MainHeaderNavigation />
-      <main>
-        {navigation.state === "loading" && <p>Loading...</p>}
-        <Outlet />
-      </main>
+
+      <Outlet />
+      <Footer />
     </>
   );
 }

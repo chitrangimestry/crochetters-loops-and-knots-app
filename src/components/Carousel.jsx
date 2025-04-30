@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import img1 from "../assets/images/crochetHooks.jpeg";
-import img2 from "../assets/images/grannysquares.jpg";
-import img3 from "../assets/images/Arigurumi.webp";
+import img2 from "../assets/images/crochet-pattern-1.jpg";
+import img3 from "../assets/images/crochet1.jpg";
 import image4 from "../assets/images/crochets.jpg";
 
 const images = [img1, img2, img3, image4];
@@ -18,8 +18,14 @@ export default function Carousel() {
     setCurrent((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  // ⏱ Auto-scroll every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 2000);
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+
   return (
-    <div className="relative w-full max-w-7xl mx-auto overflow-hidden rounded-3xl shadow-lg h-11/12">
+    <div className="relative w-full mx-auto overflow-hidden shadow-lg h-96">
       <div
         className="flex transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${current * 100}%)` }}
@@ -29,7 +35,7 @@ export default function Carousel() {
             key={index}
             src={img}
             alt={`Slide ${index}`}
-            className="w-full h-100 flex-shrink-0"
+            className="w-full h-full object-cover object-center flex-shrink-0"
           />
         ))}
       </div>

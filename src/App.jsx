@@ -1,20 +1,21 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./App.css";
-import MainHeaderNavigation from "./components/MainHeaderNavigation";
+
 import HomePage from "./pages/Home";
 import RootLayout from "./pages/Root";
 import ShopPage from "./pages/Shop";
 import CartPage from "./pages/Cart";
 import SigninPage from "./pages/SignIn";
 import ErrorPage from "./pages/ErrorPage";
+import SignupPage from "./pages/Signup";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <RootLayout />,
-      errorElement: <ErrorPage/>,
+      errorElement: <ErrorPage />,
       children: [
         {
           path: "/",
@@ -31,6 +32,10 @@ function App() {
         {
           path: "/shop",
           element: <ShopPage />,
+        },
+        {
+          path: "/signup",
+          element: <SignupPage />,
         },
       ],
     },

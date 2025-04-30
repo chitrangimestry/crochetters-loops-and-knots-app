@@ -1,4 +1,4 @@
-const Input = ({ type, placeholder, ...props }) => {
+const Input = ({ type, placeholder, onChange, onBlur, ...props }) => {
   return (
     <>
       <input
@@ -6,6 +6,8 @@ const Input = ({ type, placeholder, ...props }) => {
         placeholder={placeholder}
         nanme={props.name}
         className={props.className}
+        onChange={onChange}
+        onBlur={onBlur}
       />
     </>
   );

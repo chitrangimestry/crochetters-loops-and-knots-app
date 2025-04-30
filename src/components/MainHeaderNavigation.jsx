@@ -5,14 +5,14 @@ import { CircleUserRound, House, ShoppingCart, Store } from "lucide-react";
 function MainHeaderNavigation() {
   return (
     <>
-      <div className="flex flex-row justify-between gap-lg-2 bg-rose-200 p-2 shadow-lg">
-        <div className="flex justify-start w-full ml-10  gap-4">
+      <div className="flex flex-row justify-between  gap-lg-2 p-2 shadow-lg w-full rounded-b-2xl">
+        <div className="flex justify-start ml-10 gap-4">
           <div>
             <Link to="/">
               <img
                 src={appLogo}
                 alt="Loops and Knots Logo Image"
-                className="w-20 h-20 rounded-full lg:w-30 lg:h-30 "
+                className="w-20 h-20 rounded-full lg:w-30 lg:h-30 sm:hidden md:block lg:block "
               />
             </Link>
           </div>
