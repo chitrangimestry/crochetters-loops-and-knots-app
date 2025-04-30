@@ -8,7 +8,7 @@ function HomePage() {
   return (
     <>
       <Carousel />
-      <div className="flex flex-wrap mt-10 gap-3 sm:flex-col flex-1">
+      <div className="flex flex-wrap mt-10 gap-3 sm: flex-row flex-2">
         <Card
           src={yarnscrochetImg}
           altText="Yarnscrochet"
