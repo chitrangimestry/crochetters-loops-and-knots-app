@@ -5,41 +5,42 @@ import { CircleUserRound, House, ShoppingCart, Store } from "lucide-react";
 function MainHeaderNavigation() {
   return (
     <>
-      <div className="flex flex-row justify-between  gap-lg-2 p-2 shadow-lg w-full rounded-b-2xl">
-        <div className="flex justify-start ml-10 gap-4">
+      <div className="flex flex-row justify-between  gap-lg-2 p-2 shadow-lg w-full items-center sticky top-0 bg-white z-10">
+        <div className="flex justify-start gap-4">
           <div>
             <Link to="/">
               <img
                 src={appLogo}
                 alt="Loops and Knots Logo Image"
-                className="w-20 h-20 rounded-full lg:w-30 lg:h-30 sm:hidden md:block lg:block "
+                className="hidden md:block w-20 h-20 rounded-full lg:w-30 lg:h-30 border-1 border-amber-600 "
               />
             </Link>
           </div>
           <div className="flex items-center">
-            <p className="text- md:text-[12px] sm:text-[10px] lg:text-3xl text-wrap">
+            <p className=" md:text-[12px] sm:text-[10px] lg:text-3xl text-wrap text-rose-400">
               <Link to="/">Loops & Knots</Link>
             </p>
           </div>
         </div>
         <div className="flex items-center gap-3 text-lg ">
-          <ul className="flex gap-6 mr-12">
+          <ul className="flex gap-6 mr-8">
             <li>
               <Link to="/" className="flex items-center gap-2 md:inline">
                 <House className="md:hidden" />
                 <span className="hidden md:inline">Home</span>
               </Link>
             </li>
-            <li>
-              <Link to="/shop" className="flex items-center gap-2 md:inline">
-                <Store className="md:hidden" />
-                <span className="hidden md:inline">Shop</span>
-              </Link>
-            </li>
+
             <li>
               <Link to="/cart" className="flex items-center gap-2 md:inline">
                 <ShoppingCart className=" md:hidden" />
                 <span className="hidden md:inline">Cart</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/about-us" className="flex items-center gap-2 md:inline">
+                <Store className="md:hidden" />
+                <span className="hidden md:inline">About Us</span>
               </Link>
             </li>
             <li>

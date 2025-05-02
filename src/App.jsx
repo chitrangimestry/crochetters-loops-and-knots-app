@@ -4,11 +4,12 @@ import "./App.css";
 
 import HomePage from "./pages/Home";
 import RootLayout from "./pages/Root";
-import ShopPage from "./pages/Shop";
 import CartPage from "./pages/Cart";
 import SigninPage from "./pages/SignIn";
 import ErrorPage from "./pages/ErrorPage";
 import SignupPage from "./pages/Signup";
+import ProductDetailsPage from "./pages/ProductDetails.jsx";
+import AboutUsPage from "./pages/About.jsx";
 
 function App() {
   const router = createBrowserRouter([
@@ -30,12 +31,16 @@ function App() {
           element: <CartPage />,
         },
         {
-          path: "/shop",
-          element: <ShopPage />,
+          path: "/about-us",
+          element: <AboutUsPage />,
         },
         {
           path: "/signup",
           element: <SignupPage />,
+        },
+        {
+          path: "/product-detail/:id",
+          element: <ProductDetailsPage />,
         },
       ],
     },

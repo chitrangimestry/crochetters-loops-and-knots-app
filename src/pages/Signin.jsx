@@ -11,7 +11,7 @@ function SigninPage() {
   const [password, setPassword] = useState("");
 
   const classes =
-    "peer text-lg w-[350px] h-10 placeholder-transparent outline-none focus:outline-none focus:border-blue-500 border-b-1 border-blue-950 rounded-lg text-gray-600";
+    "peer text-lg w-[350px] h-10 placeholder-transparent outline-none border-0 border-b-2 border-blue-800 focus:border-blue-950 focus:ring-0 rounded-none text-gray-600 rounded-b-lg";
 
   function handleEmailChange(e) {
     setEmail(e.target.value);
@@ -43,7 +43,7 @@ function SigninPage() {
   }
 
   return (
-    <div className="flex flex-col justify-center justify-items-center mt-10 md:ml-[120px] lg:ml-[630px] rounded-2xl sm:border-none w-2xl h-2/4 border- border-blue-950 shadow-xl shadow-blue-200">
+    <div className="flex flex-col justify-center justify-items-center mt-10 md:ml-[120px] lg:ml-[630px] rounded-2xl sm:border-none w-2xl h-2/4  shadow-xl shadow-blue-200">
       <div className="flex justify-center items-center gap-4 mt-5">
         <User className="w-10 h-10" />
         <h1 className="text-3xl text-center">Sign In</h1>
@@ -97,7 +97,7 @@ function SigninPage() {
             )}
           </div>
           <p className="flex justify-center items-center w-full text-white ">
-            <Button className="mt-5 border-green-950 bg-green-400 text-xl m-3 w-6/12 rounded-lg shadow-lg shadow-green-300 hover:bg-green-500 hover:">
+            <Button className="mt-5  bg-green-400 text-xl m-3 w-6/12 rounded-lg shadow-lg shadow-green-300 hover:bg-green-500 hover:">
               <p className="m-2">Sign In</p>
             </Button>
           </p>

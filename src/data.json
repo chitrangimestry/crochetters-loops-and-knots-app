@@ -1,0 +1,72 @@
+[
+  {
+    "id": "p1",
+    "title": "Shirt",
+    "description": "Summer Crochet Shirt. Buy any size, any color of your choice. Made with thick yarn and is comfortable to wear.",
+    "price": 95,
+    "image": "/assets/images/crochetTop1.jpg",
+    "size": "S",
+    "category": "Blankets",
+    "creator": "Zara"
+  },
+  {
+    "id": "p2",
+    "title": "Granny Square T-shirt",
+    "description": "Granny Square T-shirt. Buy Granny Squares of different sizes, different colors, and different patterns. Each pattern is unique and can be customized to your liking. ",
+    "price": 42,
+    "image": "/assets/images/crochetTop2.jpg",
+    "size": "S",
+    "category": "Blankets",
+    "creator": "Sasha & Co."
+  },
+  {
+    "id": "p3",
+    "title": "Granny Square Blanket",
+    "description": "Granny Square Blanket. Buy Granny Squares of different sizes, different colors, and different patterns. Each pattern is unique and can be customized to your liking.",
+    "price": 56,
+    "image": "/assets/images/crochetImg.jpg",
+    "size": "S",
+    "category": "Blankets",
+    "creator": "Chitrangi"
+  },
+  {
+    "id": "p4",
+    "title": "Yarn Skein: Shades of Gray",
+    "description": "Yarn Skein :  Buy any color of yarn of your choice. These yarns are high quality yarns and comes in different colors and sizes.",
+    "price": 20,
+    "image": "/assets/images/yarnsimg.jpg",
+    "size": "100gms",
+    "category": "Yarn ",
+    "creator": "Hobby Yarn"
+  },
+  {
+    "id": "p5",
+    "title": "Amigurumi Toys",
+    "description": "Amigurumi Toys : Buy crochet toys for as a gift for your loved ones. These can be used as bag charms or as a gift for kids. ",
+    "price": 17,
+    "image": "/assets/images/Arigurumi.webp",
+    "size": "S",
+    "category": "Crochet",
+    "creator": "Sasha & Co."
+  },
+  {
+    "id": "p6",
+    "title": "Amigurumi Toys",
+    "description": " Amigurumi Toys : Buy crochet toys for as a gift for your loved ones. These can be used as bag charms or as a gift for kids. ",
+    "price": 17,
+    "image": "/assets/images/crochets.jpg",
+    "size": "S",
+    "category": "Crochet",
+    "creator": "Sasha & Co."
+  },
+  {
+    "id": "p7",
+    "title": "Granny Squares Toys",
+    "description": "Buy Granny Squares of different sizes, different colors, and different patterns. Each pattern is unique and can be customized to your liking.  : Chitrangi",
+    "price": 3,
+    "image": "/assets/images/pattern-granny-squares.jpg",
+    "size": "M",
+    "category": "Crochet",
+    "creator": "Chitrangi"
+  }
+]

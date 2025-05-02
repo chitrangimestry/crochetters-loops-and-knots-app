@@ -1,35 +1,30 @@
 import Card from "../components/Card";
-import Carousel from "../components/Carousel";
-import yarnscrochetImg from "../assets/images/crochetImg.jpg";
-import crochetTopImg from "../assets/images/crochetTop1.jpg";
-import crochetTopImg2 from "../assets/images/crochetTop2.jpg";
+
+import { useNavigate } from "react-router-dom";
+
+import products from "../data.json";
 
 function HomePage() {
+  const navigate = useNavigate();
+
+  function handleProductView(productId) {
+    navigate(`/product-detail/${productId}`);
+  }
   return (
     <>
-      <Carousel />
-      <div className="flex flex-wrap mt-10 gap-3 sm: flex-row flex-2">
-        <Card
-          src={yarnscrochetImg}
-          altText="Yarnscrochet"
-          title="Granny Square Blanket"
-          description="Granny Square Blanket: by Chitrangi"
-          price={95}
-        />
-        <Card
-          src={crochetTopImg2}
-          altText="Yarnscrochet"
-          title="Granny Square Blanket"
-          description="Granny Square Blanket: by Chitrangi"
-          price={42}
-        />
-        <Card
-          src={crochetTopImg}
-          altText="Crochet Shirt"
-          title="Summer Crochet Shirt"
-          description="Crochet Shirt: by Chitrangi"
-          price={56}
-        />
+      <div className="w-full h-full flex flex-wrap justify-center items-center mt-12 gap-5 sm: flex-row ml-5 sm:gap-y-10 ">
+        {products.map((product) => (
+          <Card
+            key={product.id}
+            title={product.title}
+            description={product.description}
+            price={product.price}
+            src={product.image}
+            creator={product.creator}
+            altText={product.title}
+            onClick={() => handleProductView(product.id)}
+          />
+        ))}
       </div>
     </>
   );

@@ -1,0 +1,10 @@
+[
+  {
+    "userId": "u1",
+    "userName": "Chitrangi",
+    "useremail": "chitrangi@tester.com",
+    "password": "chitrangiM@123",
+    "profilePic": "/assets/images/profilepic.jpg",
+    "reviews": ["A great product, good quality and durable", "review2"]
+  }
+]
