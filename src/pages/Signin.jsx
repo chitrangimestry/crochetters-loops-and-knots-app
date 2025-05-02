@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Input from "../components/Input";
 import { User } from "lucide-react";
 import Button from "../components/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import AuthContext from "../context/AuthContext";
 
 function SigninPage() {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [password, setPassword] = useState("");
+  const { login} = useContext(AuthContext)
+  const navigate = useNavigate()
 
   const classes =
     "peer text-lg w-[350px] h-10 placeholder-transparent outline-none border-0 border-b-2 border-blue-800 focus:border-blue-950 focus:ring-0 rounded-none text-gray-600 rounded-b-lg";
@@ -42,8 +45,17 @@ function SigninPage() {
     }
   }
 
+  function handleLogin(e){
+    e.preventDefault();
+    const userData = { email: "chitrangi@tester.com", password: "chitrangiM@2001"}
+    login(userData)
+    console.log("User logged in successfully!");
+    navigate("/")
+  }
+
   return (
-    <div className="flex flex-col justify-center justify-items-center mt-10 md:ml-[120px] lg:ml-[630px] rounded-2xl sm:border-none w-2xl h-2/4  shadow-xl shadow-blue-200">
+    <div className="flex flex-col justify-center justify-items-center mt-10 md:ml-[120px] lg:ml-[450px] 
+    rounded-2xl sm:border-none w-2xl h-2/4  shadow-xl shadow-blue-200">
       <div className="flex justify-center items-center gap-4 mt-5">
         <User className="w-10 h-10" />
         <h1 className="text-3xl text-center">Sign In</h1>
@@ -97,7 +109,7 @@ function SigninPage() {
             )}
           </div>
           <p className="flex justify-center items-center w-full text-white ">
-            <Button className="mt-5  bg-green-400 text-xl m-3 w-6/12 rounded-lg shadow-lg shadow-green-300 hover:bg-green-500 hover:">
+            <Button className="mt-5  bg-green-400 text-xl m-3 w-6/12 rounded-lg shadow-lg shadow-green-300 hover:bg-green-500" onClick={handleLogin}>
               <p className="m-2">Sign In</p>
             </Button>
           </p>

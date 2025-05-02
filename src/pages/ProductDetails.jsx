@@ -3,10 +3,10 @@
 // import crochetTopImg2 from "../assets/images/crochetTop2.jpg";
 // import yarnImg from "../assets/images/yarnsimg.jpg";
 // import toysimg from "../assets/images/Arigurumi.webp";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import productData from "../data.json";
 import Button from "../components/Button";
-import { Star } from "lucide-react";
+import { ArrowLeft, Star } from "lucide-react";
 import ReviewTab from "../components/ReviewTab";
 
 function ProductDetailsPage() {
@@ -24,32 +24,35 @@ function ProductDetailsPage() {
 
   return (
     <div className="flex flex-col gap-14 lg:flex-row p-8 m-8">
+      <Link to="/">
+          <ArrowLeft />
+        </Link>
       <div className="w-full lg:w-1/2 flex flex-col">
         <img
           src={product.image}
           alt={product.title}
           className="rounded-lg shadow-lg"
         />
-        <div className="flex flex-5 flex-row gap-4 mt-5  ml-2 ">
+        <div className="flex flex-5 flex-row gap-4 mt-5  ml-2 lg:ml-0">
           <img
             src={product.image}
             alt={product.title}
-            className="rounded-lg w-50 h-40"
+            className="rounded-lg w-50 h-40 lg:w-39 lg:h-35"
           />
           <img
             src={product.image}
             alt={product.title}
-            className="rounded-lg w-50 h-40"
+            className="rounded-lg w-50 h-40 lg:w-39 lg:h-35"
           />
           <img
             src={product.image}
             alt={product.title}
-            className="rounded-lg w-50 h-40"
+            className="rounded-lg w-50 h-40 lg:w-39 lg:h-35"
           />
           <img
             src={product.image}
             alt={product.title}
-            className="rounded-lg w-50 h-40"
+            className="rounded-lg w-50 h-40 lg:w-39 lg:h-35"
           />
         </div>
       </div>

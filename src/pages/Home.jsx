@@ -12,7 +12,7 @@ function HomePage() {
   }
   return (
     <>
-      <div className="w-full h-full flex flex-wrap justify-center items-center mt-12 gap-5 sm: flex-row ml-5 sm:gap-y-10 ">
+      <div className="w-full h-full flex flex-col flex-wrap justify-center items-center mt-12 gap-5 lg:flex-row  ml-5 sm:gap-y-10 ">
         {products.map((product) => (
           <Card
             key={product.id}

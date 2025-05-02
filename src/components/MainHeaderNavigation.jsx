@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import appLogo from "/crochet.png";
 import { CircleUserRound, House, ShoppingCart, Store } from "lucide-react";
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
 
 function MainHeaderNavigation() {
+  const { isLoggedIn, login, logout } = useContext(AuthContext);
   return (
     <>
       <div className="flex flex-row justify-between  gap-lg-2 p-2 shadow-lg w-full items-center sticky top-0 bg-white z-10">
@@ -48,8 +51,22 @@ function MainHeaderNavigation() {
                 to="/signin"
                 className="flex items-center gap-2 text-nowrap md:inline"
               >
-                <CircleUserRound className="md:hidden" />
-                <span className="hidden md:inline">Sign In</span>
+                
+                {
+                  isLoggedIn ? (
+                    <span>
+                      <CircleUserRound className="md:hidden hidden" />
+                      <button onClick={logout} className="text-rose-400">Sign Out</button>
+                    </span>
+                  ) : (
+                    <span>
+                       <CircleUserRound className="md:hidden" />
+                    <span className="hidden md:inline">Sign In</span>
+                    </span>
+                   
+                  )
+                }
+                
               </Link>
             </li>
           </ul>

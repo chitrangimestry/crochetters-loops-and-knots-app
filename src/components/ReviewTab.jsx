@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { ArrowLeft, Star } from "lucide-react";
 import userData from "../users.json";
 
 function ReviewTab() {
@@ -14,9 +14,10 @@ function ReviewTab() {
           <h2>{userData[0].userName}</h2>
           <p>{userData[0].reviews[0]}</p>
           <div className="flex flex-row mt">
-            <Star />
-            <Star />
-            <Star />
+            <Star className="fill-amber-400" />
+            <Star className="fill-amber-400" />
+            <Star className="fill-amber-400" />
+            <Star className="fill-amber-400" />
             <Star />
           </div>
         </div>
