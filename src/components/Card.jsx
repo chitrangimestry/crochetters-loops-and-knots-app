@@ -50,7 +50,7 @@ function Card({ ...props }) {
       <img
         src={props.src}
         alt={props.altText}
-        className="object-cover w-full h-[180px] border border-stone-500 rounded-xl"
+        className="object-cover w-full  border border-stone-500 rounded-xl"
       />
 
       <div className="flex flex-col justify-center mt-3">
@@ -61,8 +61,7 @@ function Card({ ...props }) {
 
       <div className="flex flex-row justify-center items-center mt-4 gap-3 w-full px-2">
         <Heart className="hover:fill-red-500 w-6 h-6 cursor-pointer" />
-
-        <Button className="flex-1 h-10 bg-amber-300 rounded-lg hover:bg-amber-400 hover:shadow-lg">
+        <Button className="flex-1 h-10 bg-amber-300 rounded-lg hover:bg-amber-400 hover:shadow-lg shadow-stone-600">
           View
         </Button>
       </div>
