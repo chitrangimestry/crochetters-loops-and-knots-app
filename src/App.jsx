@@ -5,7 +5,7 @@ import "./App.css";
 import HomePage from "./pages/Home";
 import RootLayout from "./pages/Root";
 import CartPage from "./pages/Cart";
-import SigninPage from "./pages/SignIn";
+import SigninPage from "./pages/Signin.jsx";
 import ErrorPage from "./pages/ErrorPage";
 import SignupPage from "./pages/Signup";
 import ProductDetailsPage from "./pages/ProductDetails.jsx";

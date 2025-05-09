@@ -2,7 +2,7 @@ import Card from "../components/Card";
 
 import { useNavigate } from "react-router-dom";
 
-import products from "../data.json";
+import products from "../../data.json";
 
 function HomePage() {
   const navigate = useNavigate();

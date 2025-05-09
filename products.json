@@ -1,0 +1,17 @@
+[
+  {
+    "id": "p1",
+    "title": "Shirt",
+    "description": "Summer Crochet Shirt. Buy any size, any color of your choice. Made with thick yarn and is comfortable to wear.",
+    "price": 95,
+    "images": [
+      "/assets/images/crochetTop1.jpg",
+      "/assets/images/grannysquares.jpg",
+      "/assets/images/yarnsimg.jpg",
+      "/assets/images/crochetFlowers.jpg"
+    ],
+    "size": "S",
+    "category": "Blankets",
+    "creator": "Zara"
+  }
+]
